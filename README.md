@@ -13,12 +13,12 @@ The actual content of the works is not committed to this repository for copyrigh
 
 The layers in the skill are:
 - VUI:
- * receiving intents
- * handling non-query intents
- * creating a query based on intent and slot values
- * transforming query responses for voice (e.g. IPA for Latin pronunciation)
- * returning responses
+  * receiving intents
+  * handling non-query intents
+  * creating a query based on intent and slot values
+  * transforming query responses for voice (e.g. IPA for Latin pronunciation)
+  * returning responses
 - Query:
- * extracting content from the works
+  * extracting content from the works
  
  In the future the VUI layer may be split into Alexa-specific and generic layers, to add support for other VUIs.

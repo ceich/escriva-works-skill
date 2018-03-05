@@ -1,0 +1,1602 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "saint hozay maria",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "LookupIntent",
+          "slots": [
+            {
+              "name": "Book",
+              "type": "BOOK"
+            },
+            {
+              "name": "Number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{Book} number {Number}",
+            "{Book} {Number}",
+            "read number {Number} from {Book}",
+            "look up number {Number} in {Book}",
+            "look in {Book} for number {Number}",
+            "read {Book}",
+            "read chapter {Number} from {Book}"
+          ]
+        },
+        {
+          "name": "RosaryIntent",
+          "slots": [
+            {
+              "name": "Ordinal",
+              "type": "ORDINAL"
+            },
+            {
+              "name": "Mystery",
+              "type": "MYSTERY"
+            }
+          ],
+          "samples": [
+            "rosary",
+            "the rosary",
+            "{Mystery} mysteries",
+            "{Mystery} rosary",
+            "{Ordinal} mystery",
+            "{Ordinal} {Mystery} mystery"
+          ]
+        },
+        {
+          "name": "SearchIntent",
+          "slots": [
+            {
+              "name": "Book",
+              "type": "BOOK"
+            },
+            {
+              "name": "Term",
+              "type": "TERM"
+            }
+          ],
+          "samples": [
+            "search {Book} for {Term}",
+            "search for {Term}",
+            "about {Term} from {Book}",
+            "about {Term}",
+            "{Term}"
+          ]
+        },
+        {
+          "name": "StationsIntent",
+          "slots": [
+            {
+              "name": "Ordinal",
+              "type": "ORDINAL"
+            }
+          ],
+          "samples": [
+            "stations of the cross",
+            "way of the cross",
+            "{Ordinal} station of the cross",
+            "stations of the cross number {Ordinal}",
+            "way of the cross number {Ordinal}",
+            "{Ordinal} station"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "FRIENDS_GOD",
+              "name": {
+                "value": "Friends of God",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "ROSARY",
+              "name": {
+                "value": "Holy Rosary",
+                "synonyms": [
+                  "Rosary"
+                ]
+              }
+            },
+            {
+              "id": "FURROW",
+              "name": {
+                "value": "Furrow",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "CHRIST_PASSING",
+              "name": {
+                "value": "Christ is Passing By",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "STATIONS_CROSS",
+              "name": {
+                "value": "The Way of the Cross",
+                "synonyms": [
+                  "Stations of the Cross"
+                ]
+              }
+            },
+            {
+              "id": "FORGE",
+              "name": {
+                "value": "The Forge",
+                "synonyms": [
+                  "Forge"
+                ]
+              }
+            },
+            {
+              "id": "LOVE_CHURCH",
+              "name": {
+                "value": "In Love with the Church",
+                "synonyms": [
+                  "Love for the Church"
+                ]
+              }
+            },
+            {
+              "id": "CONVERSATIONS",
+              "name": {
+                "value": "Conversations",
+                "synonyms": [
+                  "Conversations with Monsignor Escriva"
+                ]
+              }
+            },
+            {
+              "id": "WAY",
+              "name": {
+                "value": "The Way",
+                "synonyms": [
+                  "Way"
+                ]
+              }
+            }
+          ],
+          "name": "BOOK"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "joyful",
+                "synonyms": [
+                  "joy"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "luminous",
+                "synonyms": [
+                  "light"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "sorrowful",
+                "synonyms": [
+                  "sorrow"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "glorious",
+                "synonyms": [
+                  "glory"
+                ]
+              }
+            }
+          ],
+          "name": "MYSTERY"
+        },
+        {
+          "values": [
+            {
+              "id": "1",
+              "name": {
+                "value": "first",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "second",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "third",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "fourth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "fifth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "6",
+              "name": {
+                "value": "sixth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "7",
+              "name": {
+                "value": "seventh",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "8",
+              "name": {
+                "value": "eighth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "9",
+              "name": {
+                "value": "ninth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "10",
+              "name": {
+                "value": "tenth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "11",
+              "name": {
+                "value": "eleventh",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "12",
+              "name": {
+                "value": "twelfth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "13",
+              "name": {
+                "value": "thirteenth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": "14",
+              "name": {
+                "value": "fourteenth",
+                "synonyms": []
+              }
+            }
+          ],
+          "name": "ORDINAL"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Abandonment",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Alms",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Angels",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Anger",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Apostle",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Apostles",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Apostolate",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Aspirations",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Authority",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Being Misunderstood",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Blessed Trinity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Blessed Virgin Mary",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Character",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Charity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Chastity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Cheerfulness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Church",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Civil Society",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Co-Redeemers",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Communion of Saints",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Compunction",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Confession",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Contemplatives",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Contrition",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Conversion",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Courage",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Cowardice",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Criteria",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Critical Spirit",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Cross",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Crucifix",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Culture",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Daring",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Dedication",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Defects",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Detachment",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Devil",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Devotions",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Difficulties",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Disappointments",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Divine Filiation",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Divine Grace",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Divine Mercy",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Divine Providence",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Divine Worship",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Docility",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Doctrinal Formation",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Doctrine",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Donkey",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Duties and Rights",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Earthly Activities",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Ecumenism",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Effectiveness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Egoism",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Environment",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Eternal Life",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Eucharist",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Examination of Conscience",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Example",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Expiation",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "External Bearing",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Failures",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Faith",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Family",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Fear of God",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Fidelity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "First Christians",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Fortitude",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Fraternity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Freedom",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Friendship",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Frivolity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Generosity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Glory of God",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Gluttony",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Godliness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Gospel",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Governance",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Graphic Examples",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Guarding One's Senses",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Heart",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Heaven",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Hedonism",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Hell",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Holy Family",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Holy Spirit",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Hope",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Human Life",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Human Person",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Human Respect",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Human Soul",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Humility",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Ideals",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Indecisiveness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Industriousness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Injustice",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Instruments of God",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Interior Life",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Jesus Christ",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Joy",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Judgment",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Justice",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Laicism",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Laziness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Little Things",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Liturgy",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Loneliness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Lordliness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Love",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Love of God",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Lukewarmness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Magnanimity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Marriage",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Mass",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Matrimony",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Maturity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Means",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Meekness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Miracles",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Mortification",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Mystical Wishful Thining",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Naturalness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Noble Aspirations",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Norms of Piety",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Obedience",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Optimism",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Order",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Ordinary Life",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pardon",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Passing Unnoticed",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Patience",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Peace",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Penance",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Perseverance",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pessimism",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Piety",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Plan of Life",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Poverty",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Prayer",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Presence of God",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Pride",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Priesthood",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Proselytism",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Prudence",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Purification",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Reading",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Realism",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Recollection",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Reconciliation",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Rectitude of Intention",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Redemption",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Reparation",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Repentance",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Resolutions",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Responsibility",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Rest",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Roman Pontiff",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Rosary",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Sacrament",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Sacrifice",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Saint Joseph",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Saints",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Sanctity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Scandal",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Science",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Scruples",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Self-denial",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Self-knowledge",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Serenity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Service",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Setbacks",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Sickness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Silence",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Simplicity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Sin",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Sincerity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Sorrow",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Souls in Purgatory",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Spiritual Childhood",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Spiritual Direction",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Spiritual Reading",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Struggle",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Stubborness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Study",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Supernatural Life",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Supernatural Outlook",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Temperance",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Temporal Activities",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Temptations",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Thanksgiving",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Toughness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Training",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Tribulations",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Trust",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Truthfulness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Understanding",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Unity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Unity of Life",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Universality",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Use of Time",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Vanity",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Virtue",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Vocation",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Weakness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Will",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Will of God",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Witness",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "Work",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "World",
+                "synonyms": []
+              }
+            }
+          ],
+          "name": "TERM"
+        }
+      ]
+    }
+  }
+}

@@ -53,8 +53,10 @@
             "read number {Number} from {Book}",
             "look up number {Number} in {Book}",
             "look in {Book} for number {Number}",
-            "read {Book}",
-            "read chapter {Number} from {Book}"
+            "read point {Number} from {Book}",
+            "look up point {Number} in {Book}",
+            "look in {Book} for point {Number}",
+            "read {Book}"
           ]
         },
         {

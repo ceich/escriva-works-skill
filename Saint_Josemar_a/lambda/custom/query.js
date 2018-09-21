@@ -5,6 +5,7 @@
 
 // keyed by locale
 var Data = require('./data');
+var Vui = require('./vui');
 
 var Works = {
   "All Works": 0,
@@ -30,12 +31,11 @@ function lookup(params) {
   }
   var result = {};
   var book = Works[params.book] || params.book;
-  var locale = params.locale ? params.locale.slice(0,2) : 'en';
   var number = params.number || 1;
   return {
     result: {
-      speechText: Data[locale][book][number],
-      repromptText: Data[locale].reprompt
+      speechText: Data[params.locale][book][number],
+      repromptText: Vui[params.locale].lookupReprompt
     }
   };  
 }

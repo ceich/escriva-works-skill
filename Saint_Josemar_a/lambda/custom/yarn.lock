@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-ask-sdk-core@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/ask-sdk-core/-/ask-sdk-core-2.0.7.tgz#0f2300aa99a5bd92c0bd700d1ed92ff8da1f83b9"
+ask-sdk-core@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/ask-sdk-core/-/ask-sdk-core-2.0.9.tgz#29a56db90909c3ca8158090b60bb26713011245e"
 
-ask-sdk-dynamodb-persistence-adapter@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/ask-sdk-dynamodb-persistence-adapter/-/ask-sdk-dynamodb-persistence-adapter-2.0.7.tgz#c00c88579cd32cf91b1b3d843615ff29cadc5234"
+ask-sdk-dynamodb-persistence-adapter@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/ask-sdk-dynamodb-persistence-adapter/-/ask-sdk-dynamodb-persistence-adapter-2.0.9.tgz#c6621cf7e137bf98f43c297738040d085f764c9a"
   dependencies:
     aws-sdk "^2.163.0"
 
@@ -17,16 +17,16 @@ ask-sdk-model@^1.0.0:
   resolved "https://registry.yarnpkg.com/ask-sdk-model/-/ask-sdk-model-1.5.0.tgz#7b2b9b5b9a22affec96b1867652c7ae286aff9a3"
 
 ask-sdk@^2.0.8:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/ask-sdk/-/ask-sdk-2.0.7.tgz#1157fb90399b50bb1deab55a866255fba4317d72"
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/ask-sdk/-/ask-sdk-2.0.9.tgz#65027ecb312b8248e8253dffbcec22afccf0f55d"
   dependencies:
-    ask-sdk-core "^2.0.7"
-    ask-sdk-dynamodb-persistence-adapter "^2.0.7"
+    ask-sdk-core "^2.0.9"
+    ask-sdk-dynamodb-persistence-adapter "^2.0.9"
     ask-sdk-model "^1.0.0"
 
 aws-sdk@^2.163.0:
-  version "2.307.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.307.0.tgz#53a5906d36061d62e7b2ceb243920c7ef8feac97"
+  version "2.319.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.319.0.tgz#b119da670d13d5d0d40a1eb768dc46244673d417"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -39,12 +39,12 @@ aws-sdk@^2.163.0:
     xml2js "0.4.19"
 
 base64-js@^1.0.2:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.3.tgz#fb13668233d9614cf5fb4bce95a9ba4096cdf801"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
 
 buffer@4.9.1:
   version "4.9.1"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-4.9.1.tgz#6d1bb601b07a4efced97094132093027c95bc298"
+  resolved "http://registry.npmjs.org/buffer/-/buffer-4.9.1.tgz#6d1bb601b07a4efced97094132093027c95bc298"
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
@@ -54,9 +54,13 @@ events@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
 
-ieee754@1.1.8, ieee754@^1.1.4:
+ieee754@1.1.8:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
+
+ieee754@^1.1.4:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.12.tgz#50bf24e5b9c8bb98af4964c941cdb0918da7b60b"
 
 isarray@^1.0.0:
   version "1.0.0"
@@ -76,7 +80,7 @@ querystring@0.2.0:
 
 sax@1.2.1:
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
+  resolved "http://registry.npmjs.org/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
 
 sax@>=0.6.0:
   version "1.2.4"

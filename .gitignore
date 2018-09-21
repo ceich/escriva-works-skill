@@ -1,3 +1,5 @@
 .ask/
 node_modules/
+package-lock.json
 yarn-error.log
+saint-josemaria.zip

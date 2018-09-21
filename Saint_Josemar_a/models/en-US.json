@@ -36,6 +36,32 @@
           "samples": []
         },
         {
+          "name": "ListIntent",
+          "samples": [
+            "list the books",
+            "list his writings",
+            "what are the books",
+            "what did he write",
+            "what did saint hozay maria write",
+            "what are his works"
+          ]
+        },
+        {
+          "name": "DescribeIntent",
+          "slots": [
+            {
+              "name": "Book",
+              "type": "BOOK"
+            }
+          ],
+          "samples": [
+            "describe {Book}",
+            "tell me about {Book}",
+            "what is {Book} about",
+            "what is in {Book}"
+          ]
+        },
+        {
           "name": "LookupIntent",
           "slots": [
             {
@@ -125,7 +151,9 @@
               "id": "FRIENDS_GOD",
               "name": {
                 "value": "Friends of God",
-                "synonyms": []
+                "synonyms": [
+                  "Friends"
+                ]
               }
             },
             {
@@ -148,7 +176,10 @@
               "id": "CHRIST_PASSING",
               "name": {
                 "value": "Christ is Passing By",
-                "synonyms": []
+                "synonyms": [
+                  "Chris is Passing",
+                  "Passing"
+                ]
               }
             },
             {
@@ -156,7 +187,8 @@
               "name": {
                 "value": "The Way of the Cross",
                 "synonyms": [
-                  "Stations of the Cross"
+                  "Stations of the Cross",
+                  "Stations"
                 ]
               }
             },

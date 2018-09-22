@@ -11,11 +11,12 @@ const LaunchRequestHandler = {
   handle(handlerInput) {
     const speechText = Vui[handlerInput.requestEnvelope.request.locale].launchSpeech;
     const repromptText = Vui[handlerInput.requestEnvelope.request.locale].launchReprompt;
+    const cardText = Vui[handlerInput.requestEnvelope.request.locale].cardText;
 
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(repromptText)
-      .withSimpleCard(CARD_TITLE, speechText)
+      .withSimpleCard(CARD_TITLE, cardText)
       .getResponse();
   },
 };
@@ -43,13 +44,14 @@ const ListIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'ListIntent';
   },
   handle(handlerInput) {
-    const speechText = 'This is the list intent';
-    const repromptText = 'What would you like to ask?';
+    const request = handlerInput.requestEnvelope.request;
+    const params = { locale: request.locale };
+    const result = Query.list(params).result;
 
     return handlerInput.responseBuilder
-      .speak(speechText)
-      .reprompt(repromptText)
-      .withSimpleCard(CARD_TITLE, speechText)
+      .speak(result.speechText)
+      .reprompt(result.repromptText)
+      .withSimpleCard(CARD_TITLE, result.speechText)
       .getResponse();
   }
 };
@@ -64,12 +66,11 @@ const DescribeIntentHandler = {
     const params = { locale: request.locale };
     const slots = request.intent.slots;
     params.book = slots.Book.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-    params.number = 0;
-    const result = Query.lookup(params).result;
+    const result = Query.describe(params).result;
     return handlerInput.responseBuilder
       .speak(result.speechText)
       .reprompt(result.repromptText)
-      .withSimpleCard(CARD_TITLE, result.speechText)
+      .withSimpleCard(result.book, result.speechText)
       .getResponse();
   }
 };
@@ -84,13 +85,20 @@ const LookupIntentHandler = {
     const params = { locale: request.locale };
     const slots = request.intent.slots;
     params.book = slots.Book.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-    params.number = +slots.Number.value;
-    const result = Query.lookup(params).result;
-    return handlerInput.responseBuilder
-      .speak(result.speechText)
-      .reprompt(result.repromptText)
-      .withSimpleCard(CARD_TITLE, result.speechText)
-      .getResponse();
+    params.number = slots.Number.value;
+    const { result, error } = Query.lookup(params);
+    if (error) {
+      return handlerInput.responseBuilder
+        .speak(error)
+        .withSimpleCard(CARD_TITLE, error)
+        .getResponse();
+    } else {
+      return handlerInput.responseBuilder
+        .speak(result.speechText)
+        .reprompt(result.repromptText)
+        .withSimpleCard(`${result.book}, ${result.number}`, result.speechText)
+        .getResponse();
+    }
   }
 };
 

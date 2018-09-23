@@ -1,8 +1,35 @@
 const Alexa = require('ask-sdk-core');
-const Query = require('./query');
+const { list, describe, lookup } = require('./query');
 const Vui = require('./vui');
 
 const CARD_TITLE = 'Saint Josemaría';
+
+function slotValue(slots, slotName) {
+  const slot = slots[slotName];
+  if (!slot) return null;
+  if (!slot.resolutions) return slot.value;
+  const rpa = slot.resolutions.resolutionsPerAuthority[0];
+  return ((rpa.status.code === "ER_SUCCESS_MATCH")
+    ? rpa.values[0].value.name
+    : slot.value);
+}
+
+function callQuery(handlerInput, query, params = {}) {
+  params.locale = handlerInput.requestEnvelope.request.locale;
+  const { result, error } = query(params);
+  if (error) {
+    return handlerInput.responseBuilder
+      .speak(error)
+      .withSimpleCard(CARD_TITLE, error)
+      .getResponse();
+  } else {
+    return handlerInput.responseBuilder
+      .speak(result.speechText)
+      .reprompt(result.repromptText)
+      .withSimpleCard(result.title || CARD_TITLE, result.cardText || result.speechText)
+      .getResponse();
+  }
+}
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
@@ -44,15 +71,7 @@ const ListIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'ListIntent';
   },
   handle(handlerInput) {
-    const request = handlerInput.requestEnvelope.request;
-    const params = { locale: request.locale };
-    const result = Query.list(params).result;
-
-    return handlerInput.responseBuilder
-      .speak(result.speechText)
-      .reprompt(result.repromptText)
-      .withSimpleCard(CARD_TITLE, result.speechText)
-      .getResponse();
+    return callQuery(handlerInput, list);
   }
 };
 
@@ -62,16 +81,9 @@ const DescribeIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'DescribeIntent';
   },
   handle(handlerInput) {
-    const request = handlerInput.requestEnvelope.request;
-    const params = { locale: request.locale };
-    const slots = request.intent.slots;
-    params.book = slots.Book.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-    const result = Query.describe(params).result;
-    return handlerInput.responseBuilder
-      .speak(result.speechText)
-      .reprompt(result.repromptText)
-      .withSimpleCard(result.book, result.speechText)
-      .getResponse();
+    const slots = handlerInput.requestEnvelope.request.intent.slots;
+    const params = { book: slotValue(slots, "Book") };
+    return callQuery(handlerInput, describe, params);
   }
 };
 
@@ -81,24 +93,12 @@ const LookupIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'LookupIntent';
   },
   handle(handlerInput) {
-    const request = handlerInput.requestEnvelope.request;
-    const params = { locale: request.locale };
-    const slots = request.intent.slots;
-    params.book = slots.Book.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-    params.number = slots.Number.value;
-    const { result, error } = Query.lookup(params);
-    if (error) {
-      return handlerInput.responseBuilder
-        .speak(error)
-        .withSimpleCard(CARD_TITLE, error)
-        .getResponse();
-    } else {
-      return handlerInput.responseBuilder
-        .speak(result.speechText)
-        .reprompt(result.repromptText)
-        .withSimpleCard(`${result.book}, ${result.number}`, result.speechText)
-        .getResponse();
-    }
+    const slots = handlerInput.requestEnvelope.request.intent.slots;
+    const params = {
+      book: slotValue(slots, "Book"),
+      number: slotValue(slots, "Number")
+    };
+    return callQuery(handlerInput, lookup, params);
   }
 };
 

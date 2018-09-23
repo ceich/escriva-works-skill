@@ -55,7 +55,7 @@ function describe(params) {
       result: {
         speechText: Data[params.locale][book].description,
         repromptText: Vui[params.locale].readReprompt,
-        book: Data[params.locale][book].name
+        title: Data[params.locale][book].name
       }
     };
   } else {
@@ -84,8 +84,7 @@ function lookup(params) {
       result: {
         speechText: Data[params.locale][book][number],
         repromptText: Vui[params.locale].lookupReprompt,
-        book: Data[params.locale][book].name,
-        number: number
+        title: `${Data[params.locale][book].name}, ${number}`
       }
     };
   } else {

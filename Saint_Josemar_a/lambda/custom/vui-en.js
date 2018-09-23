@@ -12,5 +12,6 @@ module.exports = {
   readReprompt: 'You can read this book or describe another one.',
   lookupReprompt: 'You can ask to repeat, or for the next or previous point.',
   bookIsRequired: 'The "book" parameter is required.',
-  numberTooHigh: 'There is no point with that number; try a smaller one.',
+  bookNotFound: 'I could not find that book; try asking for a list of the books.',
+  numberNotFound: 'There is no point with that number; try another one.',
 };

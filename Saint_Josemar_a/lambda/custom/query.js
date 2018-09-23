@@ -60,7 +60,7 @@ function describe(params) {
     };
   } else {
     return {
-      error: Vui[params.locale].numberTooHigh
+      error: Vui[params.locale].bookNotFound
     }
   }
 }
@@ -89,7 +89,7 @@ function lookup(params) {
     };
   } else {
     return {
-      error: Vui[params.locale].numberTooHigh
+      error: Vui[params.locale].numberNotFound
     }
   }
 }

@@ -3,4 +3,5 @@
 node_modules/
 package-lock.json
 yarn-error.log
+data-*.js
 saint-josemaria.zip

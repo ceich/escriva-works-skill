@@ -3,19 +3,52 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "name": "Saint Josemaría"
+          "summary": "The works of St. Josemaría Escrivá, founder of Opus Dei.",
+          "examplePhrases": [
+            "Alexa ask saint hozay maria to list the books",
+            "Read the Way",
+            "Read point two hundred from Furrow"
+          ],
+          "keywords": [
+            "christian",
+            "catholic",
+            "saint",
+            "holiness",
+            "spirituality",
+            "religion"
+          ],
+          "name": "Saint Josemaría",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/40e7/8b12642097dc459599c598ade39871c8/APP_ICON?versionId=353TV.DV7IQ8Eks24IUH4c5AkUFfHjHH&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1537901965&Signature=tXubq%2FXJp7oyWJl8T9DxOhLcEM8%3D",
+          "description": "Called the saint of ordinary life by Pope St. John Paul II at his canonization in 2002, Josemaría Escrivá has inspired millions with his written and spoken words, which have been published in nine books. Now you can experience these writings in the Alexa voice interface.\n\nYou can find points by saying the name of the book and the point number.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/b51e/3aacaf16148743cc84c851571f5f11fc/APP_ICON_LARGE?versionId=hLKlUNFS6qGvcFP1tiAzFaGxqFj6ZmzC&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1537901965&Signature=snn5QSEb%2FGK56lUxUtFXHjdUJ8A%3D"
         }
       },
       "isAvailableWorldwide": true,
+      "testingInstructions": "Try the sample utterances!\n\nI have a license to present the copyrighted material (works of St. Josemaría) from Studium Foundation; please refer to https://drive.google.com/file/d/0B6ysFzJ9KBeKQUd2eGhFSEpfSkZ6ZWxyZVVMLXdlMG5UdDFJ/view?usp=sharing for details.",
+      "category": "EDUCATION_AND_REFERENCE",
       "distributionCountries": []
     },
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda/custom"
-        }
+          "uri": "arn:aws:lambda:us-east-1:436222378100:function:saint-josemaria"
+        },
+        "interfaces": []
       }
     },
-    "manifestVersion": "1.0"
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "termsOfUseUrl": "https://docs.google.com/document/d/14DZNUIO2eFDUUwpbomLF4Pz3pLnASGSdRR0y6jeI80A/edit?usp=sharing",
+          "privacyPolicyUrl": "https://docs.google.com/document/d/1jjzv2_ZqR22biyNAUzIMhZIsaC2FbzcgFrPSjhOPuAs/edit?usp=sharing"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
   }
 }

@@ -22,7 +22,8 @@ and could be added in the future.
 The skill architecture makes additional language support as simple as possible.
 
 The actual content of the works is not in this repository for copyright reasons,
-but scripts to transform the content from the source format (MySQL) to JSON are.
+but scripts to extract the content from the source (MySQL) to JSON are present
+(see `dumper.js`).
 
 ## Intents
 

@@ -1,0 +1,8 @@
+{
+  "name": "escriva-works-dumper",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "mysql": "^2.15.0"
+  }
+}

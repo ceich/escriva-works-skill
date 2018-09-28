@@ -85,7 +85,8 @@ function lookup(params) {
         speechText: Data[params.locale][book][number],
         repromptText: Vui[params.locale].lookupReprompt,
         title: `${Data[params.locale][book].name}, ${number}`
-      }
+      },
+      attributes: { book, number }
     };
   } else {
     return {

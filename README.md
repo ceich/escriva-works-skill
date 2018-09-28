@@ -47,9 +47,12 @@ The layers in the skill are:
   * saving state
   * returning responses
 - Query:
-  * extracting content from the works given a set of parameters, returning one of:
-    - a single passage
-    - a list of search results
-    - an empty set
+  * extracting content from the works given a set of parameters,
+returning an object with the following properties:
+    - `result`:
+      - a single passage
+      - a list of search results
+      - an empty set
+    - `attributes`: a set of attributes for use by next request
+    - `error`: an error message
  
- In the future the VUI layer may be split into Alexa-specific and generic layers, to add support for other VUIs.

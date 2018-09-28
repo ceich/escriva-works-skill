@@ -10,22 +10,29 @@ function slotValue(slots, slotName) {
   if (!slot.resolutions) return slot.value;
   const rpa = slot.resolutions.resolutionsPerAuthority[0];
   return ((rpa.status.code === "ER_SUCCESS_MATCH")
-    ? rpa.values[0].value.name
+    ? rpa.values[0].value.id
     : slot.value);
 }
 
 function callQuery(handlerInput, query, params = {}) {
   params.locale = handlerInput.requestEnvelope.request.locale;
-  const { result, error } = query(params);
+  const { result, attributes, error } = query(params);
   if (error) {
     return handlerInput.responseBuilder
       .speak(error)
       .withSimpleCard(CARD_TITLE, error)
       .getResponse();
-  } else {
+  }
+  handlerInput.attributesManager.setSessionAttributes(attributes);
+  if (result.repromptText) {
     return handlerInput.responseBuilder
       .speak(result.speechText)
       .reprompt(result.repromptText)
+      .withSimpleCard(result.title || CARD_TITLE, result.cardText || result.speechText)
+      .getResponse();
+  } {
+    return handlerInput.responseBuilder
+      .speak(result.speechText)
       .withSimpleCard(result.title || CARD_TITLE, result.cardText || result.speechText)
       .getResponse();
   }

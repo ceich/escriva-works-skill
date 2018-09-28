@@ -7,18 +7,18 @@
 var Data = require('./data');
 var Vui = require('./vui');
 
-// These keys must match the values of the "values[i].name.value" key 
-// in the speech model's BOOK type definition
+// These keys must match the values of the "values[i].id" key 
+// in the speech model's BOOK type definition (locale-independent).
 var Works = {
-  "The Way": "1",
-  "Furrow": "2",
-  "The Forge": "3",
-  "Friends of God": "4",
-  "Christ is Passing By": "5",
-  "In Love with the Church": "6",
-  "Holy Rosary": "7",
-  "The Way of the Cross": "8",
-  "Conversations": "9",
+  "WAY": "1",
+  "FURROW": "2",
+  "FORGE": "3",
+  "FRIENDS_GOD": "4",
+  "CHRIST_PASSING": "5",
+  "LOVE_CHURCH": "6",
+  "ROSARY": "7",
+  "STATIONS_CROSS": "8",
+  "CONVERSATIONS": "9",
 };
 
 // list the books

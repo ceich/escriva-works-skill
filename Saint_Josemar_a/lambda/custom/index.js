@@ -45,7 +45,7 @@ const LaunchRequestHandler = {
   handle(handlerInput) {
     const speechText = Vui[handlerInput.requestEnvelope.request.locale].launchSpeech;
     const repromptText = Vui[handlerInput.requestEnvelope.request.locale].launchReprompt;
-    const cardText = Vui[handlerInput.requestEnvelope.request.locale].cardText;
+    const cardText = Vui[handlerInput.requestEnvelope.request.locale].launchCardText;
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -61,8 +61,8 @@ const HelpIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
   },
   handle(handlerInput) {
-    const speechText = 'This is the help intent';
-    const repromptText = 'What would you like to ask?';
+    const speechText = Vui[handlerInput.requestEnvelope.request.locale].helpSpeech;
+    const repromptText = Vui[handlerInput.requestEnvelope.request.locale].helpReprompt;
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -173,7 +173,7 @@ const CancelAndStopIntentHandler = {
         || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
   },
   handle(handlerInput) {
-    const speechText = 'Goodbye!';
+    const speechText = Vui[handlerInput.requestEnvelope.request.locale].stopSpeech;
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -195,9 +195,9 @@ const SessionEndedRequestHandler = {
 
 // INTERCEPTORS
 
-// If locale is present, strip down to first two characters; default to 'en'
 const NormalizeLocaleRequestInterceptor = {
   process(handlerInput) {
+    // If locale is present, strip down to first two characters; default to 'en'
     const locale = handlerInput.requestEnvelope.request.locale;
     handlerInput.requestEnvelope.request.locale = locale ? locale.slice(0,2) : 'en';
   }
@@ -226,7 +226,7 @@ const ErrorHandler = {
   },
   handle(handlerInput, error) {
     console.log(`Error handled: ${error.message}`);
-    const speechText = 'Sorry, I can\'t understand the command. Please say again.';
+    const speechText = Vui[handlerInput.requestEnvelope.request.locale].errorSpeech;
 
     return handlerInput.responseBuilder
       .speak(speechText)

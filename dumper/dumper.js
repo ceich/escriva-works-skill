@@ -3,9 +3,15 @@
 var fs = require('fs');
 var mysql = require('mysql');
 
-function sanitize(text) {
-  var tagRe = /<\/?\w+>/gi; // Alexa barfs on non-SSML tags like <I>
-  return text.replace(tagRe, '');
+function sanitize(bookId, text) {
+  // Alexa barfs on non-SSML tags like <I>
+  var sani = text.replace(/<\/?\w+>/g, '');
+  // Turn HTML entities into Unicode characters
+  sani = sani.replace(/&#151;/g, (bookId === '3')? '-' : '—');
+  sani = sani.replace(/&#8212;/g, '—');
+  sani = sani.replace(/&#822[01];/g, '"');
+  sani = sani.replace(/&#8230;/g, '…');
+  return sani;
 }
 
 function dumpSomeTables(locale) {
@@ -33,7 +39,7 @@ function dumpDescriptions(locale, data) {
       if (err) throw err;
       // console.log(fields);
       for (let row of results) {
-        data[row.bookId].description = sanitize(row.description);
+        data[row.bookId].description = sanitize(row.bookId, row.description);
       }
       dumpPoints(locale, data);
     }
@@ -47,7 +53,7 @@ function dumpPoints(locale, data) {
       if (err) throw err;
       // console.log(fields);
       for (let row of results) {
-        data[row.bookId][row.point] = sanitize(row.text);
+        data[row.bookId][row.point] = sanitize(row.bookId, row.text);
       }
       writeFile(locale, data);
     }

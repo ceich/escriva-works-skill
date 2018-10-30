@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "saint hozay maria",
+      "invocationName": "saint jose maria",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -9,26 +9,6 @@
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NextIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.PauseIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.PreviousIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.RepeatIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ResumeIntent",
           "samples": []
         },
         {
@@ -83,64 +63,6 @@
             "look up point {Number} in {Book}",
             "look in {Book} for point {Number}",
             "read {Book}"
-          ]
-        },
-        {
-          "name": "RosaryIntent",
-          "slots": [
-            {
-              "name": "Ordinal",
-              "type": "ORDINAL"
-            },
-            {
-              "name": "Mystery",
-              "type": "MYSTERY"
-            }
-          ],
-          "samples": [
-            "rosary",
-            "the rosary",
-            "{Mystery} mysteries",
-            "{Mystery} rosary",
-            "{Ordinal} mystery",
-            "{Ordinal} {Mystery} mystery"
-          ]
-        },
-        {
-          "name": "SearchIntent",
-          "slots": [
-            {
-              "name": "Book",
-              "type": "BOOK"
-            },
-            {
-              "name": "Term",
-              "type": "TERM"
-            }
-          ],
-          "samples": [
-            "search {Book} for {Term}",
-            "search for {Term}",
-            "about {Term} from {Book}",
-            "about {Term}",
-            "{Term}"
-          ]
-        },
-        {
-          "name": "StationsIntent",
-          "slots": [
-            {
-              "name": "Ordinal",
-              "type": "ORDINAL"
-            }
-          ],
-          "samples": [
-            "stations of the cross",
-            "way of the cross",
-            "{Ordinal} station of the cross",
-            "stations of the cross number {Ordinal}",
-            "way of the cross number {Ordinal}",
-            "{Ordinal} station"
           ]
         }
       ],

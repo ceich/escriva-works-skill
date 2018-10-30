@@ -4,7 +4,7 @@
 //
 
 module.exports = {
-  launchSpeech: 'Welcome to the Saint Hozay Maria skill!',
+  launchSpeech: 'Welcome to the Saint Josemaría skill!',
   launchReprompt: `You can list the books, get a description of a book,
     or look up a point in any book by number.`,
   launchCardText: 'Welcome to the Saint Josemaría skill!',
@@ -19,7 +19,7 @@ module.exports = {
 
   readReprompt: 'You can read this book or describe another one.',
 
-  lookupReprompt: 'You can ask to repeat, or for the next or previous point.',
+  lookupReprompt: 'You can ask to look up another point.',
 
   bookIsRequired: 'The "book" parameter is required.',
   bookNotFound: 'I could not find that book; try asking for a list of the books.',
